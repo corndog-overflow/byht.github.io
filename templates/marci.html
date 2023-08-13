@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .rating {
+            display: inline-block;
+            direction: rtl;
+            /* Right-to-left direction */
+        }
+
+        .rating input[type="radio"] {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating label:before {
+            content: "\2605";
+            /* Unicode star character */
+        }
+
+        .rating input[type="radio"]:checked~label {
+            color: #f39c12;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rating">
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1"></label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2"></label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3"></label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4"></label>
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5"></label>
+    </div>
+
+    <script>
+        const ratingInputs = document.querySelectorAll('input[name="rating"]');
+
+        ratingInputs.forEach(input => {
+            input.addEventListener('change', event => {
+                const selectedRating = event.target.value;
+                console.log(`Selected rating: ${selectedRating} stars`);
+            });
+        });
+    </script>
+</body>
+
+</html>

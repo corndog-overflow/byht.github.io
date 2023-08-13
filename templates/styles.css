@@ -1,0 +1,118 @@
+
+.body{
+    color: red !important; 
+}
+
+.headline{
+    display: flex;
+    justify-content: center;   
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.B-hidden{
+    color: rgb(166, 37, 63);
+    opacity: 5%;
+    transition: opacity 1s;
+    transition-delay: 2s;
+    user-select: none;
+}
+
+
+.B-hidden:hover{
+    user-select: none;
+    animation: reveal 1s;
+    transition: ease-in-out .5s;
+    transition-delay: 500ms;
+    animation-fill-mode: forwards;
+}
+
+
+.abt{
+    text-align: center;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    
+}
+/* 
+
+#M{
+    font-family: 
+} */
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+.dhalls{
+    display: flex;
+    justify-content: space-evenly;
+}
+.creds{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight:500;
+
+}
+#top{
+    display: flex;
+    margin-top: 10% ;
+}
+
+
+@keyframes reveal {
+    0% {opacity: 0%;}
+    100%  {opacity: 100%;}
+}
+
+@keyframes hide {
+    0% {opacity: 100%;}
+    100%  {opacity: 0%;}
+}
+#M{
+    font-family: 'Yuji Boku', serif;
+    font-size: 500%;
+}
+#Warren{
+    font-family: 'Nova Square', cursive;
+    font-size: 500%;
+}
+#West{
+    font-family: 'Faster One', cursive;
+    font-size: 500%;
+}
+
+.dhallt{
+    user-select: none;
+    text-decoration: none;
+    color: black;
+}
+
+.subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.dhallt:hover{
+   color: rgb(166, 37, 63);
+   transition: color 250ms
+}
+
+.dhall{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@keyframes becomeRed{
+    from {color: black !important;}
+    to {color: rgb(166, 37, 63) !important;}
+}
